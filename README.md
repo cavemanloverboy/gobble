@@ -2,7 +2,7 @@
 
 Transaction simulation harness that detects when Solana programs read forbidden bytes from instruction data via the instructions sysvar. This identifies malicious AMMs that snoop on slippage parameters (e.g. `min_amount_out` at bytes 8-16) to provide worse fills during CPI.
 
-## Deployed programs (mainnet-beta)
+## Deployed demo programs (mainnet-beta) (these do not do any real transfers)
 
 | Program | Address |
 |---------|---------|
