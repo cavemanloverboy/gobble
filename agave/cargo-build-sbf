@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+here=$(dirname "$0")
+
+set -ex
+if [[ ! -f "$here"/platform-tools-sdk/sbf/syscalls.txt ]]; then
+  cargo build --manifest-path "$here"/syscalls/gen-syscall-list/Cargo.toml
+fi
+exec cargo run --manifest-path "$here"/platform-tools-sdk/cargo-build-sbf/Cargo.toml -- "$@"

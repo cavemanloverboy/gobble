@@ -1,0 +1,4 @@
+target/
+*.json
+!gobble-lib/fixtures/*.json
+.claude/

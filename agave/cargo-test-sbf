@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+here=$(dirname "$0")
+
+export CARGO_BUILD_SBF="$here"/cargo-build-sbf
+set -x
+exec cargo run --manifest-path "$here"/platform-tools-sdk/cargo-test-sbf/Cargo.toml -- "$@"
